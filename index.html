@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="css/ydui.css?rev=@@hash"/>
+    <link rel="stylesheet" href="css/demo.css"/>
+    <script src="js/ydui.flexible.js"></script>
+
+    <style type="text/css">
+
+    </style>
+    <script>
+        
+    </script>
+
+</head>
+
+
+<body>
+<section class="g-flexview" style="font-size: 125%;">
+
+    <div class="g-scrollview" style="background-color: white">
+        <!--<h2 class="demo-pagetitle" ></h2>-->
+    <br/>
+        <div class="m-grids-2" style=" padding-left: 10px">
+            <div class="grids-item">
+                <p>Your name</p>
+                <p>Company name</p>
+                <p>1 Infinite Loop, Cupertino, CA 95014</p>
+                <br>
+                <p>(123)456-789(phone)</p>
+                <p>(123)456-789(Fax)</p>
+                <p>zhen720@126.com</p>
+            </div>
+
+            <div class="grids-item">
+
+                <h1 class="demo-pagetitle" style="color: black" id="UserName">  </h1>
+                <div style="float: left; text-align: right;">
+                    <p> Invoice No: </p>
+                    <p> Invoice Date: </p>
+                    <p> Due Date: </p>
+                </div>
+
+                <div style="justify-content: flex-start; text-align: right; padding-right: 10%">
+                    <p> 111</p>
+                    <p> 08/02/2017 </p>
+                    <p> 08/02/2017 </p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div style="border-bottom: 1px solid #D9D9D9; padding-left: 10px; margin-top: 10px">
+            <p>Bill to: RockeyLiu</p>
+            <p style="border-left-width: 10px">Company name</p>
+            <p>1 Infinite Loop, Cupertino, CA 95014</p>
+            <br>
+            <p>(123)456-789(phone)</p>
+            <p>(123)456-789(Fax)</p>
+        </div>
+
+        <div style="border-bottom: 1px solid #D9D9D9; text-align: center">
+            <table id='table' style="width: 100%; height: 100px;" >
+                　
+                <!--<caption style="background-color: #0ab7ff;"><h1>课程表</h1></caption>-->
+
+                　<tr bgcolor="#0ab7ff" style="color: white"><!----行-->
+                <!--　　　　<th colspan="2"></th>-->
+                　　　　<th>Description</th>
+                　　　　<th>Quantity</th>
+                　　　　<th>Unit Price</th>
+                　　　　<th>Total</th>
+                　</tr>
+
+            </table>
+        </div>
+
+        <div class="m-grids-2" style=" background-color: transparent;padding-left: 10px; margin-top: 10px">
+            <div class="grids-item" style="width: 40%">
+                <p>Terms & Notes</p>
+                <p>Please pay within 21 days.</p>
+                <p>Thank you for your bussiness.</p>
+            </div>
+
+            <div class="grids-item" style="padding-left: 10px;">
+
+                <div style="float: left; text-align: right;">
+                    <p> Subtotal: </p>
+                    <p> Tax: </p>
+                    <p> Discount: </p>
+                    <p> Total: </p>
+                    <p> Paid: </p>
+                </div>
+                <div style="justify-content: flex-start; text-align: right">
+                    <p> $10000.00 </p>
+                    <p> $10000.00 </p>
+                    <p> $10.00 </p>
+                    <p> $10000.00 </p>
+                    <p> $10000.00 </p>
+                </div>
+                <p style="background-color: #0ab7ff; font-size: 120%; color: white"> Balance Due:  $10000 </p>
+
+            </div>
+        </div>
+    </div>
+
+<!--<h5 style="color:blue" onclick="method.show();">调用OC无参无返回值方法</h5>-->
+<!--<h5 style="color:blue" onclick="alert(method.returnString());">从OC返回字符串</h5>-->
+<!--<h5 style="color:blue" onclick="method.showNumber(1,2);">传递2个整数到OC</h5>-->
+<!--<h5 style="color:blue" onclick="alert(method.returnSum(10,20));">传递2个整数到OC，得到他们的和</h5>-->
+<!--<h5 style="color:blue" onclick="method.arrayTest([1,2,'hello oc', {'name':'jack'}]);">传递数组到OC</h5>-->
+<!--<h5 style="color:blue" onclick="method.dictTest({'name':'jack', 'data':[1, 'hello', {'age' : 10}]});">传递字典到OC</h5>-->
+<!--<h5 style="color:blue" onclick="DictionaryFun(method.returnDict());">从OC返回字典</h5>-->
+<!--<h5 style="color:blue" onclick="ArrayFun(method.returnArray());">从OC返回数组</h5>-->
+
+</section>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/ydui.js"></script>
+<script>(!YDUI.device.isMobile && navigator.userAgent.indexOf('Firefox') >= 0) && YDUI.dialog.alert('PC端请使用谷歌内核浏览器查看！');</script>
+<Script language="javascript">
+
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+
+    document.getElementById("arr").innerHTML = getUrlParam('arr');
+</script>
+
+<script>
+    function testB(str){
+        document.getElementById("UserName").innerHTML = str;
+    }
+
+
+function testJSON(data){
+    var obj = JSON.parse(data);
+    console.info("JSON:" + obj);
+              var table=document.getElementById("table");
+              for(var i=0;i<obj.length;i++){
+                  var row=table.insertRow(table.rows.length);
+                  var c1=row.insertCell(0);
+                  c1.innerHTML="<span>"+ obj[i].BrandName + "<p style='color:lightgray; fontsize=8'>"+obj[i].Detail +"</span>";
+                  var c2=row.insertCell(1);
+                  c2.innerHTML=obj[i].Modul;
+                  var c3=row.insertCell(2);
+                  c3.innerHTML=obj[i].Quantity;
+                  var c4=row.insertCell(3);
+                  c4.innerHTML=obj[i].Datecode;
+              }
+}
+
+<!--$.ajax({-->
+<!--       type: "GET",-->
+<!--       url: "UserList.ashx?Action=List",//利用ajax请求后台的并返回值-->
+<!--       // data: "json",-->
+<!--       success: function (result) {//result为后台返回的值,是json字符串的形式-->
+<!--       // alert(result);-->
+<!--       var obj = JSON.parse(result);//解析json字符串为json对象形式-->
+<!--       var trStr = '';//动态拼接table-->
+<!--       // var html = '';-->
+<!--       for (var i = 0; i < obj.length; i++) {//循环遍历出json对象中的每一个数据并显示在对应的td中-->
+<!--       trStr += '<tr class="example">';//拼接处规范的表格形式-->
+<!--       trStr += '<td width="15%" style="display:none" id="user">' + obj[i].NVFID + '</td>';//数据表的主键值-->
+<!--       trStr += '<td width="15%">' + obj[i].USERCODE + '</td>';//对应数组表的字段值-->
+<!--       trStr += '<td width="15%">' + obj[i].USERNAME + '</td>';-->
+<!--       trStr += '<td width="15%">' + obj[i].USERPWD + '</td>';-->
+<!--       trStr += '<td>' + obj[i].PHONEIMEI + '</td>';-->
+<!--       trStr += '<td>' + obj[i].BMMC + '</td>';-->
+<!--       /*经典之处，要将主键对应的值以json的形式进行传递，才能在后台使用*/-->
+<!--<!--<!--       trStr += "<td><a href='#'style='text-decoration:none' onclick='Delete(\"" + obj[i].NVFID + "\")'>删除</a><td>";-->-->-->
+<!--       trStr += '</tr>';-->
+<!--       }-->
+<!--       $("#tbody").html(trStr);//运用html方法将拼接的table添加到tbody中return;-->
+<!--       },-->
+<!--       error: function (error) {-->
+<!--       alert(error);-->
+<!--       }-->
+<!--       });-->
+
+</script>
+
+</body>
+</html>
